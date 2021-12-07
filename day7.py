@@ -7,17 +7,14 @@ lists = []
 
 for i in range(len(ls)):
   for line in ls:
-    if ls[i] > x:
-      numbers.append(ls[i] - x)
+    if ls[i] > line:
+      numbers.append(ls[i] - line)
     else:
-      numbers.append(x - ls[i])
-    lists.append(numberino)
-    numberino = []
+      numbers.append(line - ls[i])
+    lists.append(numbers)
+    numbers = []
     
-results = list(zip(*lists))
-for item in range(len(results)):
-  results[item] = sum(results[item])
-  
-results.sort()
-
-print(results[:1])    
+for item in range(len(lists)):
+  lists[item] = sum(lists[item])
+lists.sort()
+print(lists[:1])   
