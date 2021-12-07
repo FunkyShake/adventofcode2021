@@ -11,8 +11,8 @@ for i in range(len(ls)):
       numbers.append(ls[i] - line)
     else:
       numbers.append(line - ls[i])
-    lists.append(numbers)
-    numbers = []
+  lists.append(numbers)
+  numbers = []
     
 for item in range(len(lists)):
   lists[item] = sum(lists[item])
