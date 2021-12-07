@@ -1,5 +1,5 @@
 # Part 1
-with open('day7.py', 'r') as f:
+with open('day7.txt', 'r') as f:
   ls = list(map(int, f.read().strip().split(',')))
  
 numbers = []
