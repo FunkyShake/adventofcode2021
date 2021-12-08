@@ -7,18 +7,22 @@ lists = []
 a = 0
 b = 0
 
-for i in range(len(ls)):
-  for line in ls:
-    if ls[i] > line:
-      b = (ls[i] - line)
+ls.sort()
+for line in ls:
+  for i in range(ls[0], (ls[-1]+1)):
+
+    if line > i:
+      b = (line - i)
       numbers.append(sum([j for j in range(a, b+1))
     else:
-      b = (line - ls[i])
+      b = (i - line)
       numbers.append(sum([j for j in range(a, b+1))
   lists.append(numbers)
   numbers = []
-    
-for item in range(len(lists)):
-  lists[item] = sum(lists[item])
-lists.sort()
-print(lists[:1])  
+   
+results = list(zip(*lists))
+for item in range(len(results)):
+  results[item] = sum(results[item])
+
+results.sort()
+print(results[:1])
