@@ -1,4 +1,4 @@
-# Part 1
+# Part 2
 with open('day7.txt', 'r') as f:
   ls = list(map(int, f.read().strip().split(',')))
  
@@ -13,10 +13,10 @@ for line in ls:
 
     if line > i:
       b = (line - i)
-      numbers.append(sum([j for j in range(a, b+1))
+      numbers.append(sum([j for j in range(a, b+1)]))
     else:
       b = (i - line)
-      numbers.append(sum([j for j in range(a, b+1))
+      numbers.append(sum([j for j in range(a, b+1)]))
   lists.append(numbers)
   numbers = []
    
