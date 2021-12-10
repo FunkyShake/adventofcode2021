@@ -37,9 +37,9 @@ for line in ls:
       if l == ex_set:
         
         # make a list of dictionary items for right side
-        right = [''.join(sorted(map(dictionaries.get, item]))) for item in right.split()]
+        right = [''.join(sorted(map(dictionaries.get, item))) for item in right.split()]
         # make a string based off the index in example
-        right = ''.join(str(example.index(x) for x in right)
+        right = ''.join(str(example.index(x)) for x in right)
         # convert to integer and add to totals
         totals += int(right)
                         
